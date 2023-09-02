@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Page</title>
+    <style>
+        /* Set the background color to black */
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Style the image */
+        .mySlides img {
+            width: 100%;
+        }
+
+        /* Quote text */
+        .quote {
+            color: indigo; /* Change quote text color to indigo */
+            font-size: 14px;
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 100%;
+            text-align: center; /* Align quote text to the center */
+            background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent background to improve visibility */
+            padding: 8px 0; /* Add some padding for better presentation */
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="im-sorry-wat.gif" alt="Slide 1">
+            <div class="quote">"Love is not just something. Love is everything."</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="sorry-anime-anime-sorry.gif" alt="Slide 2">
+            <div class="quote">"In your arms is where I belong."</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="gg.gif" alt="Slide 3">
+            <div class="quote">"You are the sunshine in my life."</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="sorry.gif" alt="Slide 4">
+            <div class="quote">"Every moment with you is a moment I treasure."</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="tenory.gif" alt="Slide 5">
+            <div class="quote">"I love you more than words can express."</div>
+        </div>
+    </div>
+    <footer>
+        <!-- Add the button inside the footer -->
+        <a href="last-page.html">
+            <button>click here</button>
+        </a>
+    </footer>
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        showSlides();
+    </script>
+</body>
+</html>
